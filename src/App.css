@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Quicksand';
+    font-weight: 400;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .animated-border {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1px; /* Adjust padding to make room for the border */
+  }
+  
+  .animated-border::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Adjust the height of the border */
+    background-color: limegreen; /* Adjust the border color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .animated-border:hover::after {
+    width: 100%;
+  }
+
+  .home-gradient{
+    filter: drop-shadow(0px 0px  100px #82cb82);
+  }
+
+  .image-gradient{
+    box-shadow: 0px 10px 50px 0px rgba(51,187,110,0.65);
+  }
+  .neon {
+    filter: url(#neon);
+  }
