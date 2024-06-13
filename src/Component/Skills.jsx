@@ -46,13 +46,14 @@ const Skills = () => {
 
   return (
     <div className={`h-[660px] p-10 relative overflow-hidden ${theme === 'light' ? 'bg-white text-black' : 'bg-gray-900 text-white'}`}>
-      <div className="absolute top-16 right-64 w-full h-full flex items-center justify-center z-0">
+      <div className="absolute top-16 right-64 w-full h-full hidden sm:flex items-center justify-center z-0">
         <motion.div
           className="w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse"
           animate={{ scale: [1, 1.5, 1] }}
           transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
         />
       </div>
+
       <motion.div
         initial="hidden"
         animate="visible"

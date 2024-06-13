@@ -100,6 +100,14 @@ const Experience = () => {
           <div>{renderItems(experiences)}</div>
         </div>
       </motion.div>
+      <div className="absolute top-0 left-0 w-full h-full hidden sm:flex items-center justify-center z-0">
+        <motion.div
+          className="w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse"
+          animate={{ scale: [1, 1.5, 1] }}
+          transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+        />
+      </div>
+      <div className="block sm:hidden">
       <div className="absolute bottom-16 left-32 flex items-center justify-center overflow-hidden bg-transparent">
         <motion.div
           animate={{
@@ -179,6 +187,7 @@ const Experience = () => {
           transition={{ duration: 2.3, repeat: Infinity }}
           className="w-24 h-24 bg-green-600 bg-opacity-20 rounded-full"
         />
+      </div>
       </div>
     </div>
   );
